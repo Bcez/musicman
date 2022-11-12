@@ -6,6 +6,8 @@ scoreLeftWrist=0;
 scoreRightWrist=0;
 song1 = "";
 song2 = "";
+song1status = "";
+song2status = "";
 
 function preload(){
   song1 = loadSound('Aria Math.mp3');
@@ -50,26 +52,31 @@ function draw(){
 
     fill('black')
     stroke('blue')
-    
+    song1status = song1.isPlaying();
+  song2status = song2.isPlaying();
 
 
     if(scoreRightWrist > 0.2){
         circle(rightWristX,rightWristY,20);
-        InNumberrightWristY = Number(rightWristY);
+                song2.stop();
+       if(song1status == false){
        
         document.getElementById("music").innerHTML = "Music = Minecraft Theme Song";
-        song2.stop();
+        
         song1.play();
-}
+       }
+    }
 
     if(scoreLeftWrist > 0.2){
         circle(leftWristX,leftWristY,20);
-        InNumberleftWristY = Number(leftWristY);
-       
-        document.getElementById("music").innerHTML = "Music = I Show Spped Yelling";
         song1.stop();
+       
+        if(song2status == false){
+       
+        document.getElementById("music").innerHTML = "Music = Someone Screaming";
+        
         song2.play();
+       }
 }
 }
 // Sound System //
-
