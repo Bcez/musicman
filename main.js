@@ -4,10 +4,12 @@ rightWristX=0;
 rightWristY=0;
 scoreLeftWrist=0;
 scoreRightWrist=0;
-song = "";
+song1 = "";
+song2 = "";
 
 function preload(){
-  
+  song1 = loadSound('Aria Math.mp3');
+  song2 = loadSound('z6eit.mp3');
    
 }
 
@@ -51,15 +53,22 @@ function draw(){
     
 
 
+    if(scoreRightWrist > 0.2){
+        circle(rightWristX,rightWristY,20);
+        InNumberrightWristY = Number(rightWristY);
+       
+        document.getElementById("music").innerHTML = "Music = Minecraft Theme Song";
+        song2.stop();
+        song1.play();
+}
 
     if(scoreLeftWrist > 0.2){
         circle(leftWristX,leftWristY,20);
         InNumberleftWristY = Number(leftWristY);
        
         document.getElementById("music").innerHTML = "Music = I Show Spped Yelling";
-        song.stop();
-        song.loadSound('z6eit.mp3');
-        song.play();
+        song1.stop();
+        song2.play();
 }
 }
 // Sound System //
