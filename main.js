@@ -7,7 +7,7 @@ scoreRightWrist=0;
 song = "";
 
 function preload(){
-   setup();
+  
    
 }
 
@@ -49,18 +49,6 @@ function draw(){
     fill('black')
     stroke('blue')
     
-if(scoreRightWrist > 0.2) {
-    circle(rightWristX,rightWristY,20)
-
-  
-
-
-if(rightWristY > 300 && rightWristY <= 400)
-{
-document.getElementById("speed").innerHTML = "Speed = 2x";
-song.rate(2);
-}
-
 
 
 
