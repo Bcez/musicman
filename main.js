@@ -7,6 +7,7 @@ scoreRightWrist=0;
 song = "";
 
 function preload(){
+   setup();
    
 }
 
